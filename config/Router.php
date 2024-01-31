@@ -1,8 +1,14 @@
 <?php
 
-class Router {
+class Router 
+{
+    public function__construct()
+    {
+        
+    }
     
-    public function handleRequest(array $get): void {
+    public function handleRequest(array $get): void 
+    {
         // condition si la clé "route" existe dans le tableau $get et auquel cas sa valeur est égale à "a-propos"
         if (isset($get["route"]) && $get["route"] === "a-propos") {
             // création d'une instance de PageController
@@ -22,7 +28,7 @@ class Router {
             // création d'une instance de PageController
             $pageController = new PageController();
             // appelle la méthode '404' de PageController
-            $pageController->notFound();
+            $pageController->error404();
         }
     }
 }
